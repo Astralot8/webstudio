@@ -1,4 +1,4 @@
-@import "../../../../../public/assets/styles/variables";
+@use "../../../../../public/assets/styles/variables";
 
 .user-agreement{
     .container{
@@ -8,7 +8,7 @@
             font-family: "Lora", sans-serif;
             font-weight: 400;
             font-size: 36px;
-            color: $light-blue-text-color;
+            color: variables.$light-blue-text-color;
         }
 
         .user-agreement-text{
@@ -18,7 +18,7 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 130%;
-            color: $dark-blue-text-color;
+            color: variables.$dark-blue-text-color;
         }
     }
 }

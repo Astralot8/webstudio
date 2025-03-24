@@ -1,4 +1,4 @@
-@import "../../../../../public/assets/styles/variables";
+@use "../../../../../public/assets/styles/variables";
 
 .header {
     padding: 40px 0;
@@ -36,11 +36,11 @@
                     }
 
                     a {
-                        color: $dark-blue-text-color;
+                        color: variables.$dark-blue-text-color;
                         text-decoration: none;
 
                         &.active {
-                            color: $light-blue-text-color;
+                            color: variables.$light-blue-text-color;
                         }
 
                     }
@@ -56,7 +56,7 @@
                 font-family: "Montserrat", sans-serif;
                 font-weight: 500;
                 font-size: 16px;
-                color: $light-blue-text-color;
+                color: variables.$light-blue-text-color;
                 text-decoration: none;
             }
         }
@@ -78,7 +78,7 @@
                         sans-serif;
                     font-weight: 500;
                     font-size: 16px;
-                    color: $dark-blue-text-color;
+                    color: variables.$dark-blue-text-color;
                 }
 
 

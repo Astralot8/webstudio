@@ -87,11 +87,11 @@
                 <div class="article-comments-add-be-first" *ngIf="allComments.allCount === 0">Будьте первым, кто оставит свой комментарий к статье!</div>
                 <div class="article-comments-add-input">
                     <textarea placeholder="Напишите Ваш комментарий к статье..." [(ngModel)]="comment"></textarea>
-                    <button class="button comment-button" (click)="addComment()">Опубликовать комментарий</button>
+                    <button class="button comment-button" (click)="addComment()" [disabled]="comment.length <= 0">Опубликовать комментарий</button>
                 </div>
             </div>
 
-            <div class="article-comments-items" *ngIf="visibleComments.comments">
+            <div class="article-comments-items" *ngIf="allComments.comments">
                 <div class="article-comments-item" *ngFor="let comment of visibleComments.comments; let i = index">
                     <div class="article-comments-item-head">
                         <div class="article-comments-item-head-image">
@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="article-comments-items-link" 
-                (click)="loadMoreComments()" *ngIf="!isLoading && this.commentParams.offset < this.allComments.allCount">
+                (click)="loadMoreComments()" *ngIf="!isLoading && articleCount < allCommentsNumber">
                     <span>Загрузить ещё комментарии</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

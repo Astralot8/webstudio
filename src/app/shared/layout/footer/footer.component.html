@@ -39,7 +39,8 @@
             <div class="footer-contacts-item">
                 <div class="footer-contacts-item-title">E-mail</div>
                 <div class="footer-contacts-item-text">
-                    <a href="mailto:info@itstorm.com" class="email">info&#64;itstorm.com</a></div>
+                    <a href="mailto:info@itstorm.com" class="email">info&#64;itstorm.com</a>
+                </div>
             </div>
             <div class="footer-contacts-item">
                 <div class="footer-contacts-item-title">Мы в социальных сетях:</div>
@@ -90,22 +91,33 @@
         </div>
         <div class="popup-order" *ngIf="!successOrder" [formGroup]="orderForm">
             <div class="popup-title">Заявка на услугу</div>
-            <div class="auth-form" >
+            <div class="auth-form">
                 <div class="auth-form-inputs">
                     <div class="auth-form-input">
                         <input type="text" [ngStyle]="{'border-color': orderForm.get('name')?.invalid
                         && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'red' : ''}"
-                            formControlName="name" placeholder="Ваше имя"></div>
+                            formControlName="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="auth-form-input-error" [ngStyle]="{'display': orderForm.get('name')?.invalid
+                            && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'block' : 'none'}">
+                        Введите ваше имя в формате: Илья.
+                    </div>
                     <div class="auth-form-input">
                         <input type="text" [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
                         && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'red' : ''}"
-                            formControlName="phone" placeholder="Ваш номер телефона"></div>
+                            formControlName="phone" placeholder="Ваш номер телефона">
+                    </div>
+                    <div class="auth-form-input-error" [ngStyle]="{'display': orderForm.get('phone')?.invalid
+                            && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'block' : 'none'}">
+                        Введите телефон в формате +7 912 123 45 67.
+                    </div>
                 </div>
-                <button class="button popup-button" [disabled]="orderForm.invalid" (click)="createConsultation()">Оставить заявку</button>
+                <button class="button popup-button" [disabled]="orderForm.invalid"
+                    (click)="createConsultation()">Оставить заявку</button>
             </div>
 
             <div class="popup-canceled-request" *ngIf="canceledOrder">
-            Произошла ошибка при отправке запроса, попробуйте еще раз!
+                Произошла ошибка при отправке запроса, попробуйте еще раз!
             </div>
         </div>
     </div>

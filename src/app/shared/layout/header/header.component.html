@@ -57,8 +57,8 @@
                 <span *ngIf="isLogged">Привет, {{userName}}!</span>
 
                 <mat-menu #menu="matMenu">
-                    <button mat-menu-item>
-                        <span (click)="logout()">Выйти</span>
+                    <button mat-menu-item (click)="logout()">
+                        <span>Выйти</span>
                     </button>
                 </mat-menu>
             

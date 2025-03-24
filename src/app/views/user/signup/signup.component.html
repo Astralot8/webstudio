@@ -4,22 +4,31 @@
             <div class="auth-form-title">Регистрация на сайте</div>
             <div class="auth-form-inputs">
                 <div class="auth-form-input">
-                    <input type="text" placeholder="Ваше имя"
+                    <input type="text" placeholder="Ваше Имя"
                     [ngStyle]="{'border-color': signupForm.get('name')?.invalid
                         && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched) ? 'red' : ''}"
                     formControlName="name">
                 </div>
+                <div class="auth-form-input-error"
+                    [ngStyle]="{'display': signupForm.get('name')?.invalid
+                        && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched) ? 'block' : 'none'}"
+                    >Введите ваше имя в формате: Илья</div>
                 <div class="auth-form-input">
                     <input type="text" placeholder="Электронная почта"
                     [ngStyle]="{'border-color': signupForm.get('email')?.invalid
                         && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'red' : ''}"
                     formControlName="email">
                 </div>
+                <div class="auth-form-input-error"
+                    [ngStyle]="{'display': signupForm.get('email')?.invalid
+                        && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'block' : 'none'}"
+                    >Введите Ваш email в формате: test&#64;test.com</div>
                 <div class="auth-form-input">
                     <input [type]="showPass ? 'password' : 'text'" placeholder="Пароль"
                     [ngStyle]="{'border-color': signupForm.get('password')?.invalid
                         && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'red' : ''}"
                     formControlName="password">
+                    
                     <div class="pass-toggle" (click)="passToggle()">
                         <svg *ngIf="showPass" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
                             fill="none">
@@ -43,6 +52,11 @@
                         </svg>
                     </div>
                 </div>
+                <div class="auth-form-input-error"
+                    [ngStyle]="{'display': signupForm.get('password')?.invalid
+                        && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'block' : 'none'}">
+                    Пароль должен быть длинной не менее 8 символов, содержать заглавную букву, цифру и символ. 
+                </div>
                 <div class="auth-form-checkbox">
                     <input type="checkbox" id="agree" formControlName="agree">
                     <label for="agree">
@@ -52,10 +66,14 @@
                         согласие на обработку персональных данных.</a>
                     </label>
                 </div>
-
+                <div class="auth-form-input-error"
+                [ngStyle]="{'display': signupForm.get('agree')?.invalid
+                    && (signupForm.get('agree')?.dirty || signupForm.get('agree')?.touched) ? 'block' : 'none'}">
+                Вы должны согласиться с условиями! 
+            </div>
             </div>
             <div class="auth-button">
-                <button class="button" [disabled]="!signupForm.valid" (click)="signup()">Зарегистрироваться</button>
+                <button class="button" [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться</button>
             </div>
             <div class="auth-link">
                 Уже есть аккаунт? <a routerLink="/login">Войдите</a>

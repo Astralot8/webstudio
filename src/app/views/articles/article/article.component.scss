@@ -1,5 +1,5 @@
-@import "../../../../../public/assets/styles/variables";
-@import "../../../../../public/assets/styles/mixins";
+@use "../../../../../public/assets/styles/variables";
+@use "../../../../../public/assets/styles/mixins";
 
 .article {
     padding-top: 80px;
@@ -29,7 +29,7 @@
                 font-family: "Montserrat", sans-serif;
                 font-weight: 500;
                 font-size: 16px;
-                color: $light-blue-text-color;
+                color: variables.$light-blue-text-color;
             }
         }
 
@@ -43,7 +43,7 @@
                 width: 607px;
 
                 .article-head-text-title {
-                    @include head-lora-38;
+                    @include mixins.head-lora-38;
                     margin-bottom: 40px;
                 }
 
@@ -52,7 +52,7 @@
                     font-weight: 400;
                     font-size: 20px;
                     line-height: 130%;
-                    color: $light-blue-text-color;
+                    color: variables.$light-blue-text-color;
                 }
             }
 
@@ -89,7 +89,7 @@
                     font-weight: 400;
                     font-size: 26px;
                     line-height: 130%;
-                    color: $light-blue-text-color;
+                    color: variables.$light-blue-text-color;
                 }
             }
         }
@@ -105,7 +105,7 @@
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 130%;
-                color: $light-blue-text-color;
+                color: variables.$light-blue-text-color;
                 margin-right: 20px;
             }
 
@@ -129,7 +129,7 @@
             width: 818px;
 
             .article-comments-title {
-                @include head-lora-38;
+                @include mixins.head-lora-38;
                 padding-bottom: 20px;
             }
 
@@ -137,12 +137,12 @@
                 font-family: "Montserrat", sans-serif;
                 font-weight: 400;
                 font-size: 14px;
-                color: $dark-blue-text-color;
+                color: variables.$dark-blue-text-color;
                 margin-bottom: 60px;
 
                 a {
                     text-decoration: none;
-                    color: $light-blue-text-color;
+                    color: variables.$light-blue-text-color;
                     ;
                 }
             }
@@ -155,7 +155,7 @@
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 130%;
-                    color: $dark-blue-text-color;
+                    color: variables.$dark-blue-text-color;
                     margin-bottom: 40px;
                 }
 
@@ -163,7 +163,7 @@
                     width: 818px;
 
                     textarea {
-                        border: 2px solid $light-blue-text-color;
+                        border: 2px solid variables.$light-blue-text-color;
                         border-radius: 3px;
                         padding: 20px 64px 20px 20px;
                         width: 818px;
@@ -209,7 +209,7 @@
                             height: 60px;
                             background: #b9d5fd;
                             border-radius: 100%;
-                            border: 2px solid $light-blue-text-color;
+                            border: 2px solid variables.$light-blue-text-color;
 
                             display: flex;
                         }
@@ -219,7 +219,7 @@
                             font-family: "Montserrat", sans-serif;
                             font-weight: 600;
                             font-size: 18px;
-                            color: $light-blue-text-color;
+                            color: variables.$light-blue-text-color;
 
 
                             span {
@@ -236,7 +236,7 @@
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 140%;
-                        color: $dark-blue-text-color;
+                        color: variables.$dark-blue-text-color;
                         margin-bottom: 39px;
                     }
 
@@ -254,7 +254,7 @@
                                 font-weight: 600;
                                 font-size: 14px;
                                 margin-right: 3px;
-                                color: $dark-blue-text-color;
+                                color: variables.$dark-blue-text-color;
                             }
 
                             .article-comments-item-reaction-icon {
@@ -263,12 +263,12 @@
 
                             &.active {
                                 .article-comments-item-reaction-count {
-                                    color: $light-blue-text-color;
+                                    color: variables.$light-blue-text-color;
                                 }
 
                                 svg {
                                     path {
-                                        stroke: $light-blue-text-color;
+                                        stroke: variables.$light-blue-text-color;
                                     }
                                 }
                             }
@@ -286,7 +286,7 @@
                         font-weight: 500;
                         font-size: 20px;
                         margin-right: 10px;
-                        color: $light-blue-text-color;
+                        color: variables.$light-blue-text-color;
                     }
                 }
 
@@ -306,7 +306,7 @@
                         top: 2.4000000000000004px;
                         position: absolute;
                         animation: ldio-yzaezf3dcmj linear 1s infinite;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                         width: 12.8px;
                         height: 40px;
                         border-radius: 4.800000000000001px / 4.800000000000001px;
@@ -316,49 +316,49 @@
                     .ldio-yzaezf3dcmj div:nth-child(1) {
                         transform: rotate(0deg);
                         animation-delay: -0.875s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(2) {
                         transform: rotate(45deg);
                         animation-delay: -0.75s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(3) {
                         transform: rotate(90deg);
                         animation-delay: -0.625s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(4) {
                         transform: rotate(135deg);
                         animation-delay: -0.5s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(5) {
                         transform: rotate(180deg);
                         animation-delay: -0.375s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(6) {
                         transform: rotate(225deg);
                         animation-delay: -0.25s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(7) {
                         transform: rotate(270deg);
                         animation-delay: -0.125s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .ldio-yzaezf3dcmj div:nth-child(8) {
                         transform: rotate(315deg);
                         animation-delay: 0s;
-                        background: $light-blue-text-color;
+                        background: variables.$light-blue-text-color;
                     }
 
                     .loadingio-spinner-spinner-2by998twmg8 {

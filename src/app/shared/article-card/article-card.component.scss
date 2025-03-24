@@ -1,4 +1,4 @@
-@import "../../../../public/assets/styles/variables";
+@use "../../../../public/assets/styles/variables";
 
 .article-card {
     position: relative;
@@ -14,7 +14,7 @@
         font-weight: 400;
         font-size: 11px;
         text-align: center;
-        color: $light-blue-text-color;
+        color: variables.$light-blue-text-color;
     }
 
     .article-card-image {
@@ -33,7 +33,7 @@
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
             font-size: 20px;
-            color: $light-blue-text-color;
+            color: variables.$light-blue-text-color;
             margin-bottom: 20px;
         }
 
@@ -42,7 +42,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 130%;
-            color: $dark-blue-text-color;
+            color: variables.$dark-blue-text-color;
         }
     }
 
@@ -52,8 +52,8 @@
             font-weight: 400;
             font-size: 16px;
             text-decoration: none;
-            border-bottom: 1px solid $light-blue-text-color;
-            color: $light-blue-text-color;
+            border-bottom: 1px solid variables.$light-blue-text-color;
+            color: variables.$light-blue-text-color;
             cursor: pointer;
         }
         

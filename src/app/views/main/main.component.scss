@@ -1,4 +1,5 @@
-@import "../../../../public/assets/styles/variables";
+@use "../../../../public/assets/styles/variables";
+@use "../../../../public/assets/styles/mixins";
 
 .main {
     margin-bottom: 120px;
@@ -67,7 +68,7 @@
                     line-height: 130%;
                     letter-spacing: 0.4em;
                     text-transform: uppercase;
-                    color: $light-blue-text-color;
+                    color: variables.$light-blue-text-color;
                     z-index: 10;
                 }
 
@@ -82,7 +83,7 @@
                     margin-bottom: 20px;
 
                     span {
-                        color: $light-blue-text-color;
+                        color: variables.$light-blue-text-color;
                     }
 
                     &.first-slide-title {
@@ -115,10 +116,7 @@
 
     .container {
         .products-title {
-            font-family: "Lora", sans-serif;
-            font-weight: 400;
-            font-size: 38px;
-            color: $light-blue-text-color;
+            @include mixins.head-lora-38;
             margin-bottom: 40px;
         }
 
@@ -143,7 +141,7 @@
                     font-family: "Montserrat", sans-serif;
                     font-weight: 500;
                     font-size: 20px;
-                    color: $light-blue-text-color;
+                    color: variables.$light-blue-text-color;
                     margin-bottom: 10px;
                 }
 
@@ -152,7 +150,7 @@
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 130%;
-                    color: $dark-blue-text-color;
+                    color: variables.$dark-blue-text-color;
                     margin-bottom: 33px;
                     height: 90px;
                 }
@@ -167,7 +165,7 @@
                         font-family: "Montserrat", sans-serif;
                         font-weight: 600;
                         font-size: 20px;
-                        color: $light-blue-text-color;
+                        color: variables.$light-blue-text-color;
                     }
 
                     .button {
@@ -204,10 +202,7 @@
             width: 713px;
 
             .about-details-title {
-                font-family: "Lora", sans-serif;
-                font-weight: 400;
-                font-size: 38px;
-                color: $light-blue-text-color;
+                @include mixins.head-lora-38;
                 margin-bottom: 20px;
             }
 
@@ -227,11 +222,7 @@
             .about-details-advantages {
 
                 .about-details-advantages-title {
-                    font-family: "Lora", sans-serif;
-                    font-weight: 400;
-                    font-size: 26px;
-                    line-height: 130%;
-                    color: $light-blue-text-color;
+                    @include mixins.head-lora-38;
                     margin-bottom: 20px;
 
 
@@ -251,10 +242,7 @@
                         align-items: center;
 
                         .about-details-advantages-item-number {
-                            font-family: "Lora", sans-serif;
-                            font-weight: 500;
-                            font-size: 50px;
-                            color: $light-blue-text-color;
+                            @include mixins.head-lora-38;
                             position: relative;
                             text-align: center;
 
@@ -295,10 +283,7 @@
     .container {
 
         .blog-title {
-            font-family: "Lora", sans-serif;
-            font-weight: 400;
-            font-size: 38px;
-            color: $light-blue-text-color;
+            @include mixins.head-lora-38;
             margin-bottom: 40px;
         }
 
@@ -324,7 +309,7 @@
                 font-family: "Montserrat", sans-serif;
                 font-weight: 500;
                 font-size: 20px;
-                color: $light-blue-text-color;
+                color: variables.$light-blue-text-color;
                 margin-right: 14px;
             }
             svg {
@@ -340,10 +325,7 @@
     .container {
 
         .reviews-title {
-            font-family: "Lora", sans-serif;
-            font-weight: 400;
-            font-size: 38px;
-            color: $light-blue-text-color;
+            @include mixins.head-lora-38;
             margin-bottom: 20px;
         }
 
@@ -368,7 +350,7 @@
                 width: 396px;
                 height: 267px;
                 padding: 30px;
-                border: 2px solid $light-blue-text-color;
+                border: 2px solid variables.$light-blue-text-color;
                 border-radius: 5px;
                 box-sizing: border-box;
                 margin-right: 7px;
@@ -393,7 +375,7 @@
                         font-weight: 600;
                         font-size: 18px;
                         line-height: 130%;
-                        color: $light-blue-text-color;
+                        color: variables.$light-blue-text-color;
                     }
                 }
 
@@ -402,7 +384,7 @@
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 140%;
-                    color: $dark-blue-text-color;
+                    color: variables.$dark-blue-text-color;
                 }
             }
         }
@@ -426,10 +408,7 @@
             width: 501px;
 
             .contacts-details-title {
-                font-family: "Lora", sans-serif;
-                font-weight: 400;
-                font-size: 38px;
-                color: $light-blue-text-color;
+                @include mixins.head-lora-38;
                 margin-bottom: 20px;
             }
 
@@ -444,7 +423,7 @@
                     font-family: "Montserrat", sans-serif;
                     font-weight: 500;
                     font-size: 20px;
-                    color: $light-blue-text-color;
+                    color: variables.$light-blue-text-color;
                     margin-bottom: 10px;
                 }
 
@@ -453,7 +432,7 @@
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 130%;
-                    color: $dark-blue-text-color;
+                    color: variables.$dark-blue-text-color;
                 }
 
                 a.contacts-details-block-text {

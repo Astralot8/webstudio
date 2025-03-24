@@ -39,6 +39,8 @@ export class ArticleComponent implements OnInit {
     comments: []
   };
 
+  articleCount: number = 0
+
   comment: string = '';
 
   limitInitial: number = 3;
@@ -46,23 +48,30 @@ export class ArticleComponent implements OnInit {
 
   isLoading: boolean = false;
 
+  allCommentsNumber: number = 0;
+
   userCommentAction = UserCommentActionType;
 
   reactions: CommentsActionUserType[] = [];
 
   constructor(private activatedRoute: ActivatedRoute, private articleService: ArticlesService, private authService: AuthService, private commentsService: CommentsService, private _snackBar: MatSnackBar, private cdr: ChangeDetectorRef) {
     this.isLogged = this.authService.getIsLoggedIn();
+
+
   }
 
   ngOnInit(): void {
+    this.loadArticle();
+  }
+
+  loadArticle(): void {
     this.activatedRoute.params.subscribe(params => {
       this.articleService.getArticle(params['url']).subscribe(
         (data: ArticleType) => {
           this.article = data;
           this.commentParams.article = this.article.id;
-
+          this.articleCount = 0;
           this.loadComments();
-
         }
       )
       this.articleService.getArticleRelated(params['url']).subscribe(
@@ -82,12 +91,15 @@ export class ArticleComponent implements OnInit {
     this.commentsService.getComments(this.commentParams).subscribe(
       {
         next: (comments: CommentsResponseType) => {
-
           this.allComments.allCount = comments.allCount;
+          this.allCommentsNumber = comments.allCount;
           this.allComments.comments = [...this.allComments.comments, ...comments.comments];
           this.updateReactions();
+
           this.updateVisibleComments();
+
           this.commentParams.offset += comments.comments.length;
+          
           this.isLoading = false
         },
         error: (error) => {
@@ -99,11 +111,17 @@ export class ArticleComponent implements OnInit {
 
   updateVisibleComments(): void {
     if (this.commentParams.offset === 0) {
+      this.visibleComments.allCount = this.allComments.allCount;
       this.visibleComments.comments = this.allComments.comments.slice(0, this.limitInitial);
+      this.articleCount = this.limitInitial;
     } else if (this.commentParams.offset === 10) {
+      this.visibleComments.allCount = this.allComments.allCount;
       this.visibleComments.comments = this.allComments.comments.slice(0, this.commentParams.offset + this.limitInitial);
+      this.articleCount = this.articleCount + this.limitToShow
     } else {
+      this.visibleComments.allCount = this.allComments.allCount;
       this.visibleComments.comments = this.allComments.comments.slice(0, this.commentParams.offset + this.limitInitial);
+      this.articleCount = this.articleCount + this.limitToShow
     }
   }
 
