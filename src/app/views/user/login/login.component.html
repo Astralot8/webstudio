@@ -53,7 +53,7 @@
 
             </div>
             <div class="auth-button">
-                <button class="button" [disabled]="loginForm.invalid" (click)="login()">Войти</button>
+                <button class="button" [ngClass]="{disabled: loginForm.invalid}" (click)="login()">Войти</button>
             </div>
             <div class="auth-link">
                 Нет аккаунта? <a routerLink="/signup">Пройдите регистрацию</a>

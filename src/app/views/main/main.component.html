@@ -382,7 +382,7 @@
                         Введите телефон в формате +7 912 123 45 67.
                     </div>
                 </div>
-                <button class="button popup-button" [disabled]="orderForm.invalid" (click)="createOrder()">Оставить
+                <button class="button popup-button" [ngClass]="{disabled: orderForm.invalid}" (click)="createOrder()">Оставить
                     заявку</button>
             </div>
 
