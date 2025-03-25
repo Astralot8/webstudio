@@ -21,7 +21,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(private authService: AuthService, private _snackBar: MatSnackBar, private router: Router) {
     this.isLogged = this.authService.getIsLoggedIn();
-    this.updateUserName();
+    if(this.isLogged){
+      this.updateUserName();
+
+    }
 
   }
 
