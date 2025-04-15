@@ -1,0 +1,177 @@
+@use "../../../../../public/assets/styles/variables";
+@use "../../../../../public/assets/styles/mixins";
+
+.blog {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    .container {
+        position: relative;
+
+        .blog-title {
+            @include mixins.head-lora-38;
+            margin-bottom: 40px;
+        }
+
+        .blog-filter {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            .blog-applied-filters {
+                display: flex;
+                align-items: center;
+
+                .blog-applied-filter {
+                    display: flex;
+                    align-items: center;
+
+                    padding: 8px 20px;
+                    border: 2px solid variables.$light-blue-text-color;
+                    border-radius: 5px;
+                    margin-right: 10px;
+
+                    span {
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: variables.$light-blue-text-color;
+                    }
+
+                    a {
+                        width: 16px;
+                        height: 17px;
+                        margin-left: 8px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .blog-filter-sorting {
+                box-sizing: border-box;
+
+                .blog-filter-sorting-head {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #071739;
+                    width: 148px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    span {
+                        z-index: -1;
+
+                    }
+                }
+
+                .blog-filter-sorting-body {
+                    display: none;
+                }
+
+                &.active {
+                    max-width: 257px;
+                    width: 257px;
+                    height: 263px;
+                    border: 2px solid #b9d5fd;
+                    border-radius: 5px;
+
+                    position: absolute;
+                    right: 0;
+                    z-index: 3;
+
+                    .blog-filter-sorting-head {
+                        box-sizing: border-box;
+                        width: 255px;
+                        border-radius: 3px 3px 0 0;
+                        background: #b9d5fd;
+                        padding: 12px 23px;
+
+                        span {
+                            z-index: 0;
+
+                        }
+                    }
+
+                    .blog-filter-sorting-body {
+                        display: block;
+                        background-color: #fff;
+                        border-radius: 0 0 3px 3px;
+
+                        .blog-filter-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 12px 23px;
+                            font-family: "Montserrat", sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #bebebe;
+                            cursor: pointer;
+
+                            &.active {
+                                color: variables.$dark-blue-text-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .blog-articles {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 24px;
+            row-gap: 40px;
+        }
+
+        .blog-pagination {
+            margin-top: 60px;
+            width: 388px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-inline: auto;
+
+            .blog-pagination-arrow {
+                cursor: pointer;
+
+                &.disabled {
+                    opacity: 0.3;
+                }
+            }
+
+            .blog-pagination-pages {
+                display: flex;
+                align-items: center;
+                margin-right: 40px;
+                margin-left: 40px;
+
+                .blog-pagination-page {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-align: center;
+                    color: #071739;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    margin-right: 20px;
+
+                    &.active {
+                        color: #b9d5fd;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

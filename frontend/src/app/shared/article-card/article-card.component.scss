@@ -1,0 +1,62 @@
+@use "../../../../public/assets/styles/variables";
+
+.article-card {
+    position: relative;
+    width: 291px;
+    .article-card-category {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border-radius: 5px;
+        padding: 10px 18px;
+        background: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        text-align: center;
+        color: variables.$light-blue-text-color;
+    }
+
+    .article-card-image {
+        border-radius: 5px;
+        width: 291px;
+        height: 291px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 15px;
+    }
+
+    .article-card-text {
+        padding-bottom: 20px;
+
+        .article-card-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            color: variables.$light-blue-text-color;
+            margin-bottom: 20px;
+        }
+
+        .article-card-description {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            color: variables.$dark-blue-text-color;
+        }
+    }
+
+    .article-card-link {
+        a{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid variables.$light-blue-text-color;
+            color: variables.$light-blue-text-color;
+            cursor: pointer;
+        }
+        
+        
+    }
+}

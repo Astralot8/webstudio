@@ -1,0 +1,88 @@
+@use "../../../../../public/assets/styles/variables";
+
+.header {
+    padding: 40px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-logo {
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .header-menu {
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                padding-left: 0;
+
+                li {
+                    margin-right: 30px;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    list-style: none;
+                    cursor: pointer;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        color: variables.$dark-blue-text-color;
+                        text-decoration: none;
+
+                        &.active {
+                            color: variables.$light-blue-text-color;
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+
+        .header-phone {
+
+            a {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                color: variables.$light-blue-text-color;
+                text-decoration: none;
+            }
+        }
+
+        .header-login {
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                cursor: pointer;
+
+                svg {
+                    margin-right: 7px;
+
+                }
+
+                span {
+                    font-family: "Montserrat",
+                        sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: variables.$dark-blue-text-color;
+                }
+
+
+            }
+        }
+    }
+}

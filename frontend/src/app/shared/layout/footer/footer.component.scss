@@ -1,0 +1,132 @@
+@use "../../../../../public/assets/styles/variables";
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 54px;
+    background: #b9d5fd;
+
+    .container {
+        .footer-menu {
+            display: flex;
+            margin-bottom: 40px;
+
+            .footer-logo {
+                margin-right: 40px;
+            }
+
+            .footer-menu-list {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    padding-left: 0;
+
+                    li {
+                        margin-right: 30px;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 500;
+                        font-size: 16px;
+                        
+                        list-style: none;
+                        cursor: pointer;
+
+
+                        a {
+                            text-decoration: none;
+                            color: variables.$dark-blue-text-color;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        
+                    }
+                }
+            }
+
+
+        }
+
+        .footer-contacts {
+            display: grid;
+            grid-template-columns: 253px 153px 127px 203px;
+            gap: 60px;
+            align-items: baseline;
+
+            .footer-contacts-item {
+                margin-bottom: 6px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .footer-contacts-item-title {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: variables.$light-blue-text-color;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .footer-contacts-item-text {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: variables.$dark-blue-text-color;
+
+
+                    .phone {
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 130%;
+                        color: variables.$dark-blue-text-color;
+                        text-decoration: none;
+                    }
+
+                    .email {
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: variables.$dark-blue-text-color;
+                        text-decoration: none;
+                    }
+                }
+
+                .footer-button {
+                    margin-top: 10px;
+                    width: 153px;
+                }
+
+                .footer-contacts-item-icon {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 5px;
+
+                    a {
+                        margin-right: 12px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .footer-right {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: variables.$light-blue-text-color;
+        }
+    }
+}

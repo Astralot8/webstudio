@@ -1,0 +1,86 @@
+<section class="signup" [formGroup]="signupForm">
+    <div class="container">
+        <div class="auth-form">
+            <div class="auth-form-title">Регистрация на сайте</div>
+            <div class="auth-form-inputs">
+                <div class="auth-form-input">
+                    <input type="text" placeholder="Ваше Имя"
+                    [ngStyle]="{'border-color': signupForm.get('name')?.invalid
+                        && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched) ? 'red' : ''}"
+                    formControlName="name">
+                </div>
+                <div class="auth-form-input-error"
+                    [ngStyle]="{'display': signupForm.get('name')?.invalid
+                        && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched) ? 'block' : 'none'}"
+                    >Введите ваше имя в формате: Илья</div>
+                <div class="auth-form-input">
+                    <input type="text" placeholder="Электронная почта"
+                    [ngStyle]="{'border-color': signupForm.get('email')?.invalid
+                        && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'red' : ''}"
+                    formControlName="email">
+                </div>
+                <div class="auth-form-input-error"
+                    [ngStyle]="{'display': signupForm.get('email')?.invalid
+                        && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'block' : 'none'}"
+                    >Введите Ваш email в формате: test&#64;test.com</div>
+                <div class="auth-form-input">
+                    <input [type]="showPass ? 'password' : 'text'" placeholder="Пароль"
+                    [ngStyle]="{'border-color': signupForm.get('password')?.invalid
+                        && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'red' : ''}"
+                    formControlName="password">
+                    
+                    <div class="pass-toggle" (click)="passToggle()">
+                        <svg *ngIf="showPass" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M2 2L22 22" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M6.71277 6.7226C3.66479 8.79527 2 12 2 12C2 12 5.63636 19 12 19C14.0503 19 15.8174 18.2734 17.2711 17.2884M11 5.05822C11.3254 5.02013 11.6588 5 12 5C18.3636 5 22 12 22 12C22 12 21.3082 13.3317 20 14.8335"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14 14.2362C13.4692 14.7112 12.7684 15.0001 12 15.0001C10.3431 15.0001 9 13.657 9 12.0001C9 11.1764 9.33193 10.4303 9.86932 9.88818"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg *ngIf="!showPass" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12" stroke="#000000" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12" stroke="#000000" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="12" cy="12" r="3" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="auth-form-input-error"
+                    [ngStyle]="{'display': signupForm.get('password')?.invalid
+                        && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'block' : 'none'}">
+                    Пароль должен быть длинной не менее 8 символов, содержать заглавную букву, цифру и символ. 
+                </div>
+                <div class="auth-form-checkbox">
+                    <input type="checkbox" id="agree" formControlName="agree">
+                    <label for="agree">
+                        Я принимаю <a routerLink="/agreement" fragment="agreement">условия пользовательского соглашения</a>
+                        и даю
+                        <a routerLink="/agreement" fragment="personal-data">
+                        согласие на обработку персональных данных.</a>
+                    </label>
+                </div>
+                <div class="auth-form-input-error"
+                [ngStyle]="{'display': signupForm.get('agree')?.invalid
+                    && (signupForm.get('agree')?.dirty || signupForm.get('agree')?.touched) ? 'block' : 'none'}">
+                Вы должны согласиться с условиями! 
+            </div>
+            </div>
+            <div class="auth-button">
+                <button class="button" [ngClass]="{disabled: signupForm.invalid}"  (click)="signup()">Зарегистрироваться</button>
+            </div>
+            <div class="auth-link">
+                Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+            </div>
+        </div>
+        <div class="signup-image">
+            <img src="/assets/images/user/signup-image.png" alt="signup-image">
+        </div>
+    </div>
+</section>

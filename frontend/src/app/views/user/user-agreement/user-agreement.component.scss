@@ -1,0 +1,24 @@
+@use "../../../../../public/assets/styles/variables";
+
+.user-agreement{
+    .container{
+        .user-agreement-title{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: "Lora", sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+            color: variables.$light-blue-text-color;
+        }
+
+        .user-agreement-text{
+            margin-bottom: 40px;
+            text-align: justify;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: variables.$dark-blue-text-color;
+        }
+    }
+}
