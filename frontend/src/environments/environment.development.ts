@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    api: 'http://localhost:3000/api/',
-    serverStaticPath: 'http://localhost:3000/images/'
+    api: 'https://my-test-app/api/',
+    serverStaticPath: 'https://my-test-app/images/'
 };
