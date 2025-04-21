@@ -27,7 +27,7 @@
         <div class="footer-contacts">
             <div class="footer-contacts-item">
                 <div class="footer-contacts-item-title">Адрес</div>
-                <div class="footer-contacts-item-text">Пресненская наб., 12, Москва, Россия, 123317.</div>
+                <div class="footer-contacts-item-text">123317, Россия, Москва, Пресненская наб., 12.</div>
             </div>
             <div class="footer-contacts-item">
                 <div class="footer-contacts-item-title">Телефон</div>
@@ -103,11 +103,11 @@
                         Введите ваше имя в формате: Илья.
                     </div>
                     <div class="auth-form-input">
-                        <input type="text" [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
+                        <input type="text" appPhoneMask [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
                         && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'red' : ''}"
                             formControlName="phone" placeholder="Ваш номер телефона">
                     </div>
-                    <div class="auth-form-input-error" [ngStyle]="{'display': orderForm.get('phone')?.invalid
+                    <div class="auth-form-input-error"  [ngStyle]="{'display': orderForm.get('phone')?.invalid
                             && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'block' : 'none'}">
                         Введите телефон в формате +7 912 123 45 67.
                     </div>

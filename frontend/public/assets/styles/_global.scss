@@ -25,7 +25,7 @@ body {
     color: #fff;
     cursor: pointer;
 
-    &.disabled{
+    &.disabled {
         background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
         color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
         border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
@@ -69,9 +69,6 @@ body {
                 }
             }
 
-           
-
-
             .pass-toggle {
                 position: absolute;
                 right: 15px;
@@ -80,7 +77,7 @@ body {
             }
         }
 
-        .auth-form-input-error{
+        .auth-form-input-error {
             font-family: "Montserrat", sans-serif;
             font-weight: 400;
             font-size: 12px;
@@ -180,20 +177,22 @@ body {
 
 .popup-back {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 4;
     position: fixed;
+    margin: 0 auto;
     top: 0;
     left: 0;
     background: rgba($color: #000000, $alpha: 0.4);
-
+    display: flex;
+    justify-content: center;
     .popup {
         position: fixed;
         text-align: center;
         width: 727px;
         padding: 94px 140px 86px 140px;
         top: 25%;
-        right: 30%;
+
         border: 2px solid variables.$light-blue-text-color;
         border-radius: 10px;
         background: #fff;
@@ -224,6 +223,7 @@ body {
 
                     .auth-form-input {
                         position: relative;
+
                         select {
                             font-family: "Montserrat", sans-serif;
                             font-weight: 400;
@@ -240,7 +240,7 @@ body {
                             /* Стиль для прочих браузеров */
                         }
 
-                        svg{
+                        svg {
                             position: absolute;
                             right: 20px;
                             top: 33%;
@@ -312,4 +312,190 @@ p {
     font-size: 14px;
     line-height: 130%;
     color: variables.$dark-blue-text-color;
+}
+
+@media screen and (max-width: 1299px) {
+    .owl-carousel.owl-theme.owl-loaded.owl-responsive {
+
+        .owl-dots {
+            left: 47%;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 1023px) {
+    .auth-form {
+        .auth-form-inputs {
+            max-width: 360px;
+
+            .auth-form-input {
+
+                input,
+                select {
+                    width: 360px;
+                }
+            }
+        }
+
+        .auth-button {
+            .button {
+                width: 360px;
+            }
+        }
+
+    }
+
+    .popup-back {
+        .popup {
+            width: 508px;
+            padding: 64px 70px 56px 70px;
+            .popup-order {
+    
+                .auth-form {
+
+                    .popup-button {
+                        width: 360px;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .owl-carousel.owl-theme.owl-loaded.owl-responsive {
+
+        .owl-dots {
+            left: 43%;
+            bottom: 5px;
+
+            span {
+                width: 6px;
+                height: 6px;
+            }
+
+        }
+    }
+
+    .auth-form {
+        max-width: 395px;
+
+        .auth-form-title {
+            font-size: 30px;
+        }
+
+        .auth-form-inputs {
+            max-width: 395px;
+
+            .auth-form-input {
+
+                input,
+                select {
+                    width: 395px;
+                }
+            }
+        }
+
+        .auth-button {
+            .button {
+                width: 395px;
+            }
+        }
+    }
+
+    .popup-back {
+        .popup {
+            width: 300px;
+            padding: 44px 10px 10px 10px;
+
+            .popup-close {
+                top: 15px;
+                right: 15px;
+            }
+            .popup-order {
+    
+                .popup-title{
+                    font-size: 25px;
+                }
+                .auth-form {
+            
+                    .auth-form-inputs {
+                        max-width: 276px;
+            
+                        .auth-form-input {
+            
+                            input,
+                            select {
+                                width: 276px;
+                            }
+                        }
+                    }
+                    .popup-button {
+                        width: 276px;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+@media screen and (max-width: 424px) {
+
+    .auth-form {
+        max-width: 355px;
+
+        .auth-form-title {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .auth-form-inputs {
+            max-width: 355px;
+
+            .auth-form-input {
+
+                input,
+                select {
+                    width: 355px;
+                }
+            }
+        }
+
+        .auth-button {
+            margin-top: 20px;
+
+            .button {
+                width: 355px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 374px) {
+
+    .auth-form {
+        max-width: 300px;
+
+        .auth-form-inputs {
+            max-width: 300px;
+
+            .auth-form-input {
+
+                input,
+                select {
+                    width: 300px;
+                }
+            }
+        }
+
+        .auth-button {
+
+            .button {
+                width: 300px;
+            }
+        }
+    }
 }

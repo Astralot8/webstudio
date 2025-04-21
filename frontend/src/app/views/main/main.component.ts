@@ -15,10 +15,10 @@ import { ArticleType } from '../../../types/article.type';
   selector: 'app-main',
   standalone: false,
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrls: ['./main.component.scss', './adaptive-main.component.scss'],
 })
 export class MainComponent implements OnInit {
-
+  
   reviews = [
     {
       name: "Станислав",
@@ -41,11 +41,14 @@ export class MainComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: true,
     navSpeed: 700,
     navText: ['', ''],
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 1
@@ -65,17 +68,20 @@ export class MainComponent implements OnInit {
   customOptionsRev: OwlOptions = {
     loop: true,
     mouseDrag: false,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
+    autoplay: true,
+    autoplayTimeout: 6000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 1
       },
       400: {
-        items: 1
+        items: 2
       },
       740: {
         items: 2
@@ -104,8 +110,8 @@ export class MainComponent implements OnInit {
 
   constructor(private categoryService: CategoryService, private fb: FormBuilder, private orderService: OrderService, private _snackBar: MatSnackBar, private articleService: ArticlesService) {
     this.orderForm = this.fb.group({
-      name: ['', [Validators.required, , Validators.pattern(/^[А-Я][а-яА-Я]{2,20}$/)]],
-      phone: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.pattern(/^[А-Я][а-яА-Я]{2,20}$/)]],
+      phone: ['', [Validators.required, Validators.pattern(/^\+7\s[(][0-9]{3}[)]\s[0-9]{3}-[0-9]{2}-[0-9]{2}$/)]],
       service: [''],
     })
   }
@@ -142,6 +148,7 @@ export class MainComponent implements OnInit {
   openPopup(orderType: string): void{
     this.selectedCategory = orderType;
     this.isPopupOpen = true;
+    
   }
 
   closePopup(): void {

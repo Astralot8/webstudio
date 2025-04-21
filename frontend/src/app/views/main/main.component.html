@@ -262,7 +262,7 @@
         <div class="contacts-map">
             <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8399a010972543838f7d8787ea58ddd6b0e44d6ef4624a0732bb5924efd1da9&amp;source=constructor"
-                width="607" height="438" frameborder="0"></iframe>
+                width="100%" height="100%" frameborder="0"></iframe>
         </div>
         <div class="contacts-details">
             <div class="contacts-details-title">Контакты</div>
@@ -366,23 +366,24 @@
                         && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'red' : ''}"
                             formControlName="name" placeholder="Ваше имя">
                     </div>
-                    <div class="auth-form-input-error"
-                        [ngStyle]="{'display': orderForm.get('name')?.invalid
+                    <div class="auth-form-input-error" [ngStyle]="{'display': orderForm.get('name')?.invalid
                         && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'block' : 'none'}">
                         Введите ваше имя в формате: Илья.
                     </div>
                     <div class="auth-form-input">
-                        <input type="text" [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
+
+                        <input type="text" appPhoneMask
+                        [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
                         && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'red' : ''}"
                             formControlName="phone" placeholder="Ваш номер телефона">
                     </div>
-                    <div class="auth-form-input-error"
-                        [ngStyle]="{'display': orderForm.get('phone')?.invalid
+                    <div class="auth-form-input-error" [ngStyle]="{'display': orderForm.get('phone')?.invalid
                         && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'block' : 'none'}">
                         Введите телефон в формате +7 912 123 45 67.
                     </div>
                 </div>
-                <button class="button popup-button" [ngClass]="{disabled: orderForm.invalid}" (click)="createOrder()">Оставить
+                <button class="button popup-button" [ngClass]="{disabled: orderForm.invalid}"
+                    (click)="createOrder()">Оставить
                     заявку</button>
             </div>
 

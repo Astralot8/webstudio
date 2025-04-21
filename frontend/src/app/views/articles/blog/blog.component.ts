@@ -13,7 +13,7 @@ import { ActiveParamsType } from '../../../../types/active-params.type';
   selector: 'app-blog',
   standalone: false,
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+  styleUrls: ['./blog.component.scss', './adaptive-blog.component.scss']
 })
 export class BlogComponent implements OnInit {
   pages: number[] = [];

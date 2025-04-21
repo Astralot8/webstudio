@@ -1,0 +1,199 @@
+@use "../../../../../public/assets/styles/variables";
+
+@media screen and (max-width: 1299px) {
+    .header {
+        .container {
+            max-width: 1120px;
+        }
+    }
+}
+
+@media screen and (max-width: 1224px) {
+    .header {
+        .container {
+            max-width: 1100px;
+        }
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    .header {
+        .container {
+            max-width: 1020px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        .container {
+            max-width: 940px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+        .container {
+            max-width: 748px;
+
+            .header-menu {
+
+                ul {
+
+                    li {
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .header-phone {
+                a {
+                    font-size: 14px;
+                }
+            }
+
+            .header-login {
+                a {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 20px 0;
+        .container {
+            max-width: 395px;
+
+            .header-menu {
+                display: none;
+            }
+            .header-phone {
+                display: none;
+            }
+
+            .header-burger{
+                display: block;
+
+                .header-burger-menu{
+                    font-family: "Montserrat",
+                        sans-serif;
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: variables.$light-blue-text-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .header {
+        .container {
+            max-width: 355px;
+
+        }
+    }
+}
+@media screen and (max-width: 374px) {
+    .header {
+        .container {
+            max-width: 300px;
+
+        }
+    }
+}
+
+
+// .header {
+//     padding: 40px 0;
+
+//     .container {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+
+//         .header-logo {
+
+//             a {
+//                 text-decoration: none;
+//             }
+//         }
+
+//         .header-menu {
+
+//             ul {
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: start;
+//                 padding-left: 0;
+
+//                 li {
+//                     margin-right: 30px;
+//                     font-family: "Montserrat", sans-serif;
+//                     font-weight: 500;
+//                     font-size: 16px;
+//                     list-style: none;
+//                     cursor: pointer;
+
+//                     &:last-child {
+//                         margin-right: 0;
+//                     }
+
+//                     a {
+//                         color: variables.$dark-blue-text-color;
+//                         text-decoration: none;
+
+//                         &.active {
+//                             color: variables.$light-blue-text-color;
+//                         }
+
+//                     }
+
+
+//                 }
+//             }
+//         }
+
+//         .header-phone {
+
+//             a {
+//                 font-family: "Montserrat", sans-serif;
+//                 font-weight: 500;
+//                 font-size: 16px;
+//                 color: variables.$light-blue-text-color;
+//                 text-decoration: none;
+//             }
+//         }
+
+//         .header-login {
+//             a {
+//                 display: flex;
+//                 align-items: center;
+//                 text-decoration: none;
+//                 cursor: pointer;
+
+//                 svg {
+//                     margin-right: 7px;
+
+//                 }
+
+//                 span {
+//                     font-family: "Montserrat",
+//                         sans-serif;
+//                     font-weight: 500;
+//                     font-size: 16px;
+//                     color: variables.$dark-blue-text-color;
+//                 }
+
+
+//             }
+//         }
+//     }
+// }

@@ -17,7 +17,7 @@ import { CommentsActionUserType } from '../../../../types/comments-action-user.t
   selector: 'app-article',
   standalone: false,
   templateUrl: './article.component.html',
-  styleUrl: './article.component.scss'
+  styleUrls: ['./article.component.scss', './adaptive-article.component.scss']
 })
 export class ArticleComponent implements OnInit {
 
@@ -238,7 +238,7 @@ export class ArticleComponent implements OnInit {
       },
       error: (errorResponse: HttpErrorResponse) => {
         if (errorResponse.error && errorResponse.error.message) {
-          this._snackBar.open(errorResponse.error.message)
+          this._snackBar.open("Чтобы поставить реакцию, войдите или зарегистрируйтесь!")
         } else {
           this._snackBar.open("Не удалось поставить реакцию!")
         }

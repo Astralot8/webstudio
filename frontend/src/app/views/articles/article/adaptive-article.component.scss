@@ -1,0 +1,398 @@
+@media screen and (max-width: 1299px) {
+    .article {
+        padding-top: 120px;
+
+        .container {
+            max-width: 920px;
+
+            .article-section {
+                margin-bottom: 40px;
+
+                .article-section-text {
+                    width: 620px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .article {
+        padding-top: 100px;
+
+        .container {
+            max-width: 748px;
+
+            .article-breadcrumbs {
+                margin-bottom: 40px;
+
+                .article-breadcrumbs-link {
+                    font-size: 14px;
+                }
+
+                .article-breadcrumbs-title {
+                    font-size: 14px;
+                }
+            }
+
+            .article-head {
+                margin-bottom: 40px;
+
+                .article-head-text {
+                    width: 350px;
+
+                    .article-head-text-description {
+                        font-size: 16px;
+                    }
+                }
+
+                .article-head-image {
+                    width: 350px;
+                }
+            }
+
+            .article-section {
+                margin-bottom: 40px;
+
+                .article-section-text {
+                    width: 498px;
+                }
+            }
+
+            .article-comments {
+                width: 395px;
+
+                .article-comments-title {
+                    font-size: 30px;
+                    padding-bottom: 20px;
+                }
+
+                .article-comments-no-log {
+                    font-size: 12px;
+                    margin-bottom: 30px;
+
+                }
+
+                .article-comments-add {
+                    margin-bottom: 30px;
+
+                    .article-comments-add-be-first {
+                        font-size: 123px;
+                        margin-bottom: 20px;
+                    }
+
+                    .article-comments-add-input {
+                        width: 748px;
+
+                        textarea {
+                            width: 748px;
+                            height: 248px;
+
+                            &::placeholder {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .comment-button {
+                            width: 395px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .article {
+        padding-top: 60px;
+
+        .container {
+            max-width: 395px;
+
+            .article-breadcrumbs {
+                margin-bottom: 20px;
+
+                .article-breadcrumbs-link {
+                    font-size: 14px;
+                }
+
+                .article-breadcrumbs-title {
+                    font-size: 14px;
+                }
+            }
+
+            .article-head {
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+
+                .article-head-text {
+                    width: 395px;
+
+                    .article-head-text-title {
+                        font-size: 30px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+
+                    .article-head-text-description {
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        text-align: justify;
+                    }
+                }
+
+                .article-head-image {
+                    width: 395px;
+                }
+            }
+
+            .article-section {
+                margin-bottom: 20px;
+
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .article-section-text {
+                    width: 395px;
+                    text-align: justify;
+                    margin-right: 0;
+                }
+
+            }
+
+            .article-share {
+                margin-bottom: 30px;
+
+                .article-share-text {
+                    font-size: 14px;
+                    margin-right: 20px;
+                }
+
+                .article-share-link {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    margin-right: 14px;
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .article-comments {
+                width: 395px;
+
+                .article-comments-title {
+                    font-size: 30px;
+                    padding-bottom: 20px;
+                }
+
+                .article-comments-no-log {
+                    font-size: 12px;
+                    margin-bottom: 30px;
+
+                }
+
+                .article-comments-add {
+                    margin-bottom: 30px;
+
+                    .article-comments-add-be-first {
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                    }
+
+                    .article-comments-add-input {
+                        width: 395px;
+
+                        textarea {
+                            width: 395px;
+                            height: 148px;
+
+                            &::placeholder {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .comment-button {
+                            width: 395px;
+                        }
+                    }
+                }
+
+                .article-comments-items {
+                    margin-bottom: 30px;
+
+                    .article-comments-item {
+                        margin-bottom: 20px;
+
+                        .article-comments-item-head {
+                            margin-bottom: 10px;
+
+                            .article-comments-item-head-name {
+                                margin-left: 20px;
+                                font-size: 16px;
+
+
+                                span {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        .article-comments-item-text {
+                            font-size: 12px;
+                            margin-bottom: 20px;
+                        }
+
+                        .article-comments-item-reactions {
+
+                            .article-comments-item-reaction {
+
+                                .article-comments-item-reaction-count {
+                                    font-size: 12px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .article-comments-items-link {
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .loader {
+
+                        .loadingio-spinner-spinner-2by998twmg8 {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 424px) {
+    .article {
+        padding-top: 30px;
+
+        .container {
+            max-width: 355px;
+
+            .article-head {
+                margin-bottom: 20px;
+
+                .article-head-text {
+                    width: 355px;
+                }
+
+                .article-head-image {
+                    width: 355px;
+                }
+            }
+
+            .article-section {
+                margin-bottom: 20px;
+
+                .article-section-text {
+                    width: 355px;
+                }
+
+            }
+
+            .article-share {
+                margin-bottom: 20px;
+
+                .article-share-text {
+                    font-size: 14px;
+                    margin-right: 10px;
+                }
+
+            }
+
+            .article-comments {
+                width: 355px;
+
+                .article-comments-add {
+
+
+                    .article-comments-add-input {
+                        width: 355px;
+
+                        textarea {
+                            width: 355px;
+
+                        }
+
+                        .comment-button {
+                            width: 355px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .article {
+        .container {
+            max-width: 300px;
+
+            .article-head {
+
+                .article-head-text {
+                    width: 300px;
+                }
+
+                .article-head-image {
+                    width: 300px;
+                }
+            }
+
+            .article-section {
+
+                .article-section-text {
+                    width: 300px;
+                }
+
+            }
+
+            .article-comments {
+                width: 300px;
+
+                .article-comments-add {
+
+                    .article-comments-add-input {
+                        width: 300px;
+
+                        textarea {
+                            width: 300px;
+                        }
+
+                        .comment-button {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+

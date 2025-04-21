@@ -11,7 +11,7 @@ import { AuthService } from '../../../core/auth/auth.service';
   selector: 'app-signup',
   standalone: false,
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.scss'
+  styleUrls: ['./signup.component.scss', './adaptive-signup.component.scss']
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;

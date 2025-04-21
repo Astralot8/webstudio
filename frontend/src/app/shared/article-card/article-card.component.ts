@@ -6,7 +6,7 @@ import { environment } from '../../../environments/environment';
   selector: 'app-article-card',
   standalone: false,
   templateUrl: './article-card.component.html',
-  styleUrl: './article-card.component.scss'
+  styleUrls: ['./article-card.component.scss', './adaptive-article-card.component.scss'],
 })
 export class ArticleCardComponent {
 

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   standalone: false,
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss', './adaptive-login.component.scss']
 })
 export class LoginComponent implements OnInit {
 

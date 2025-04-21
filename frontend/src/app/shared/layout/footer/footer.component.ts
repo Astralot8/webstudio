@@ -8,7 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   selector: 'app-footer',
   standalone: false,
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss', './adaptive-footer.component.scss'],
 })
 export class FooterComponent {
 
@@ -19,8 +19,8 @@ export class FooterComponent {
   canceledOrder: boolean = false;
   constructor(private fb: FormBuilder, private orderService: OrderService, private _snackBar: MatSnackBar) {
     this.orderForm = this.fb.group({
-      name: ['', [Validators.required, , Validators.pattern(/^[А-Я][а-яА-Я]{2,20}$/)]],
-      phone: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.pattern(/^[А-Я][а-яА-Я]{2,20}$/)]],
+      phone: ['', [Validators.required, Validators.pattern(/^\+7\s[(][0-9]{3}[)]\s[0-9]{3}-[0-9]{2}-[0-9]{2}$/)]],
     })
   }
 

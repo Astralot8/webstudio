@@ -37,7 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [provideHttpClient(withInterceptorsFromDi()),
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterseptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterseptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

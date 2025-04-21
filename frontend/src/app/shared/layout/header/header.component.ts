@@ -5,14 +5,11 @@ import { Router } from '@angular/router';
 import { DefaultResponseType } from '../../../../types/default-response.type';
 import { HttpErrorResponse } from '@angular/common/http';
 import { UserResponseType } from '../../../../types/user-response.type';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { LoginResponseType } from '../../../../types/login-response.type';
-
 @Component({
   selector: 'app-header',
   standalone: false,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss', './adaptive-header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
 

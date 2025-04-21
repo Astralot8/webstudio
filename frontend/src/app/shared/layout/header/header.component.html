@@ -22,6 +22,20 @@
                 </li>
             </ul>
         </nav>
+        <div class="header-burger">
+
+            <a [matMenuTriggerFor]="menuBurger" class="header-burger-menu">
+                Меню
+            </a>
+            <mat-menu #menuBurger="matMenu">
+                <a mat-menu-item routerLink="/" fragment="products">Услуги</a>
+                <a mat-menu-item routerLink="/" fragment="about">О нас</a>
+                <a mat-menu-item routerLink="/blog" routerLinkActive="active">Статьи</a>
+                <a mat-menu-item routerLink="/" fragment="reviews">Отзывы</a>
+                <a mat-menu-item routerLink="/" fragment="contacts">Контакты</a>
+            </mat-menu>
+        </div>
+
         <div class="header-phone">
             <a href="tel:+74993431334">+7 (499) 343-13-34</a>
         </div>
@@ -39,7 +53,7 @@
                         stroke="#071739" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
 
-                <span >Войти</span>
+                <span>Войти</span>
             </a>
             <a [matMenuTriggerFor]="menu" *ngIf="isLogged">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +75,10 @@
                         <span>Выйти</span>
                     </button>
                 </mat-menu>
-            
+
             </a>
         </div>
+
+
     </div>
 </header>
